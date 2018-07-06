@@ -1,0 +1,8 @@
+.homepage-section {
+  opacity: 0;
+  transition: opacity $duration * 2 cubic-bezier(0.3, 0.1, 1, 1) $duration;
+
+  &.active {
+    opacity: 1;
+  }
+}

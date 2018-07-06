@@ -1,0 +1,79 @@
+.amazing-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  font-weight: 500;
+  font-size: rem(12);
+  font-size: vh(12);
+  line-height: 1.15;
+  font-family: $secondary-font;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  user-select: none;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #ffffff;
+    background-color: #000000;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    box-sizing: border-box;
+    transition: $duration * 3;
+    cursor: $cursor-pointer-active;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: $cursor-pointer-active;
+
+    &::after {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+  }
+}
+
+.amazing-button__text {
+  position: relative;
+  display: block;
+  width: 100%;
+  transform: translateX(-100%);
+  font-weight: 700;
+  font-size: rem(24);
+  transition: $duration * 3;
+
+  .amazing-button:hover &,
+  .amazing-button:focus & {
+    transform: translateX(0);
+  }
+}
+
+@include mq-min(768px) {
+  .amazing-button {
+    padding-top: vh(6);
+    padding-bottom: vh(6);
+    font-size: vh(12);
+  }
+
+  .amazing-button__text {
+    font-size: vh(24);
+  }
+}

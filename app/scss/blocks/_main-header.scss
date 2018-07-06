@@ -1,0 +1,33 @@
+.main-header {
+  position: fixed;
+  max-width: 100%;
+  top: $site-offset-y;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+
+  @include mq-min(768px) {
+    left: $site-offset-x;
+    right: $site-offset-x + 70px;
+  }
+}
+
+.main-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__logo {
+  pointer-events: auto;
+}
+
+.main-header__actions {
+  pointer-events: auto;
+  transition: $duration * 2;
+
+  .is-nav-hovered & {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.section-contact-form {
+
+}
+
+.section-contact-form__text {
+  @include clear-mr-edges-elem();
+
+  max-width: 350px;
+  margin-bottom: 35px;
+  font-size: rem(11);
+
+  @include mq-min(768px) {
+    font-size: vh(11);
+  }
+}

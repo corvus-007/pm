@@ -1,0 +1,43 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "mixins-containers";
+
+@import "normalize";
+
+// Global
+@import "global/fonts";
+// @import "global/grid";
+@import "global/base";
+@import "global/layout";
+
+// Vendors
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+@import "../../node_modules/fullpage.js/dist/fullpage";
+
+// Blocks
+@import "blocks/button";
+@import "blocks/amazing-button";
+@import "blocks/form";
+@import "blocks/input";
+@import "blocks/field";
+@import "blocks/table";
+@import "blocks/popup";
+// @import "blocks/common-section";
+@import "blocks/custom-ol";
+@import "blocks/custom-ul";
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/submenu";
+@import "blocks/navbar";
+@import "blocks/homepage-section";
+@import "blocks/section-intro-main-image";
+@import "blocks/section-intro";
+@import "blocks/section-contact-form";
+@import "blocks/section-contact";
+@import "blocks/clients";
+@import "blocks/section-clients";
+@import "blocks/hamburger-menu";
+@import "blocks/page";
+@import "blocks/main-footer";
+@import "blocks/main-footer-social";

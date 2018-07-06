@@ -1,0 +1,13 @@
+.section-clients {
+}
+
+.section-clients__inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: $site-offset-x;
+  margin-right: $site-offset-x;
+  padding-top: $site-offset-y * 3;
+  padding-bottom: $site-offset-y * 2;
+  box-sizing: border-box;
+}

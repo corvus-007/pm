@@ -1,0 +1,13 @@
+@mixin make-container($gutter: $gutter) {
+  width: 100%;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  box-sizing: border-box;
+
+  @include mq-min(1024px) {
+    margin-left: $site-offset-x;
+    margin-right: $site-offset-x;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

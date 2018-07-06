@@ -1,0 +1,40 @@
+.section-contact {
+}
+
+.section-contact__inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: $site-offset-x;
+  margin-right: $site-offset-x;
+  padding-top: $site-offset-y * 3;
+  padding-bottom: $site-offset-y * 2;
+  box-sizing: border-box;
+}
+
+.section-contact__text {
+  @include clear-mr-edges-elem();
+
+  font-weight: 600;
+  // font-size: rem(60);
+  font-size: vh(60);
+  line-height: 1.15;
+  box-sizing: border-box;
+
+  @include mq-min(1024px) {
+    width: 60%;
+    padding-right: 80px;
+  }
+
+  @include mq-min(1280px) {
+    width: 50%;
+    padding-right: 150px;
+  }
+}
+
+.section-contact__form {
+
+  @include mq-min(1024px) {
+    width: 50%;
+  }
+}

@@ -1,0 +1,24 @@
+.submenu {
+  display: none;
+}
+
+.submenu__list {
+  @include clear-list();
+
+  font-size: rem(40);
+  white-space: nowrap;
+}
+
+.submenu__item {
+
+}
+
+.submenu__link {
+  color: $base-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+  }
+}

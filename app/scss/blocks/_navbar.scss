@@ -1,0 +1,20 @@
+.navbar {
+  @include mq-min(768px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    max-height: 100%;
+    border-left: 1px solid #c2c2c2;
+    transition: $duration * 2;
+
+    .is-nav-hovered & {
+      border-left-color: transparent;
+    }
+  }
+}
+
+.navbar__main-nav {
+  height: 100%;
+}

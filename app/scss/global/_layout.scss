@@ -1,0 +1,11 @@
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  @include mq-min(768px) {
+    margin-right: $site-offset-x;
+  }
+}

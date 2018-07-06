@@ -1,0 +1,30 @@
+.input {
+  width: 100%;
+  max-height: 150px;
+  padding: 18px 20px;
+  resize: vertical;
+  outline: none;
+  border: 1px solid transparent;
+  background: $gray-239;
+  font: inherit;
+  font-size: rem(11);
+  line-height: normal;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: darken($gray-239, 10%);
+  }
+
+  &::placeholder {
+    color: $base-color;
+    opacity: 0.4;
+  }
+
+  @include mq-min(768px) {
+    padding: vh(18) 20px;
+    font-size: vh(11);
+  }
+}

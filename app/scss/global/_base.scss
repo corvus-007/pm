@@ -1,0 +1,95 @@
+html {
+  font-size: $font-size;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  font-weight: 500;
+  line-height: 1.45;
+  font-size: 100%;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: $base-color;
+  background-color: #ffffff;
+  cursor: $cursor-pointer;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: $site-offset-x;
+    bottom: 0;
+    z-index: 9;
+    opacity: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transition: $duration * 2;
+  }
+}
+
+.is-nav-hovered {
+  &::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.container {
+  @include make-container();
+}
+
+a {
+  color: $link-color;
+  outline: none;
+  cursor: $cursor-pointer-active;
+
+  &:hover {
+    color: mix(#000, $link-color, 10%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0.7em;
+  margin-bottom: 0.5em;
+}
+
+h1,
+.h1 {
+  font-size: rem(32);
+}
+
+h2,
+.h2 {
+  font-size: rem(27);
+}
+
+h3,
+.h3 {
+  font-size: rem(24);
+}
+
+h4,
+.h4 {
+  font-size: rem(21);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}
