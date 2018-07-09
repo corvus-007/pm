@@ -106,7 +106,7 @@
 }
 
 .main-nav__submenu {
-  @include mq-max(767px) {
+  @include mq-max(1023px) {
     display: none;
 
     .main-nav__item--opened & {
@@ -118,6 +118,8 @@
     position: absolute;
     top: 0;
     right: 100%;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

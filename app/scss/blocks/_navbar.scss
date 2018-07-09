@@ -34,9 +34,9 @@
 
 .navbar__inner {
   height: 100%;
-  overflow-y: auto;
 
   @include mq-max(1023px) {
+    overflow-y: auto;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -62,4 +62,3 @@
     display: none;
   }
 }
-

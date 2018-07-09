@@ -1,7 +1,7 @@
 .homepage-section {
   @include mq-max(1023px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     border-bottom: 1px solid $light-color;
   }
 
