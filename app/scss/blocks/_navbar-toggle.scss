@@ -1,0 +1,64 @@
+.navbar-toggle {
+  position: relative;
+  margin: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    margin: auto;
+    background-color: currentColor;
+    transition: top $duration $duration, bottom $duration $duration, transform $duration;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &--triggered {
+    &::before,
+    &::after {
+      transition: top $duration, bottom $duration, transform $duration $duration;
+    }
+
+    &::before {
+      top: calc(50% - 2.5px);
+      transform: rotate(-45deg) scalex(1.2);
+    }
+
+    &::after {
+      bottom: calc(50% - 2.5px);
+      transform: rotate(45deg) scalex(1.2);
+    }
+  }
+}
+
+.navbar-toggle__line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  margin: auto;
+  background-color: currentColor;
+  transition: $duration;
+
+  .navbar-toggle--triggered & {
+    opacity: 0;
+  }
+}
