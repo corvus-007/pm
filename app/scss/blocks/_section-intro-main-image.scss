@@ -83,8 +83,27 @@
   &--20 {
     background-image: url("images/section-intro-main-images/20.jpg");
   }
+
+  @include mq-max(1023px) {
+    display: flex;
+    align-items: flex-end;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .section-intro-main-image__image-text {
-  max-width: 50%;
+    max-width: 50%;
+
+  @include mq-max(1023px) {
+    max-width: none;
+    height: 35vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    flex-shrink: 0;
+    transform: translateY(3px);
+  }
 }

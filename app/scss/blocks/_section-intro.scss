@@ -1,56 +1,73 @@
 .section-intro {
-  @include mq-min(768px) {
+  padding-bottom: 100px;
+
+  @include mq-min(1024px) {
     margin-right: $site-offset-x;
+    padding-bottom: 0;
   }
 }
 
 .section-intro__inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-left: $site-offset-x;
+
+  @include mq-min(1024px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: $site-offset-x;
+  }
 }
 
 .section-intro__top {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 100px;
-  height: 50%;
-  box-sizing: border-box;
+  @include mq-min(1024px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 100px;
+    height: 50%;
+    box-sizing: border-box;
+  }
 }
 
 .section-intro__bottom {
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-bottom: $site-offset-y;
+  padding: 20px;
+  padding-top: 60px;
+
+  @include mq-min(1024px) {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: $site-offset-y;
+  }
 }
 
 .section-intro__main-image {
-  margin-left: -$site-offset-x;
-  padding-left: $site-offset-x;
-  padding-right: 70px;
+  height: 70vw;
+
+  @include mq-min(1024px) {
+    height: auto;
+    margin-left: -$site-offset-x;
+    padding-left: $site-offset-x;
+    padding-right: 70px;
+  }
 }
 
 .section-intro__content {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding-right: 70px;
-  font-weight: 600;
-  font-size: rem(11);
+  font-weight: 500;
+  font-size: rem(12);
 
-  @include mq-min(768px) {
+  @include mq-min(1024px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 70px;
     font-size: vh(11);
   }
 }
 
 .section-intro__title {
   margin: 0;
-  width: 50%;
-  padding-right: $gutter;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: rem(36);
   line-height: 1.15;
@@ -58,6 +75,7 @@
 
   span {
     display: block;
+    white-space: nowrap;
   }
 
   mark {
@@ -77,15 +95,24 @@
     }
   }
 
-  @include mq-min(768px) {
+  @include mq-min(1024px) {
+    width: 50%;
+    margin-bottom: 0;
+    padding-right: $gutter;
     font-size: vh(36);
+  }
+}
+
+.section-intro__to-order {
+  margin-bottom: $gutter * 2;
+
+  @include mq-min(1024px) {
+    display: none;
   }
 }
 
 .section-intro__text {
   @include clear-mr-edges-elem();
-
-  width: 50%;
 
   mark {
     position: relative;
@@ -103,5 +130,9 @@
       transform-origin: 100% 100%;
       background-color: $warning-color;
     }
+  }
+
+  @include mq-min(1024px) {
+    width: 50%;
   }
 }
