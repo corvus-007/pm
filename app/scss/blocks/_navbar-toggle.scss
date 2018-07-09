@@ -1,13 +1,13 @@
 .navbar-toggle {
   position: relative;
-  margin: 5px;
   width: 32px;
-  height: 32px;
+  height: 29px;
   padding: 0;
   border: none;
   box-sizing: border-box;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
 
   &::before,
   &::after {
@@ -29,7 +29,7 @@
     bottom: 0;
   }
 
-  &--triggered {
+  &--fired {
     &::before,
     &::after {
       transition: top $duration, bottom $duration, transform $duration $duration;
@@ -37,12 +37,12 @@
 
     &::before {
       top: calc(50% - 2.5px);
-      transform: rotate(-45deg) scalex(1.2);
+      transform: rotate(-45deg) scale(1.2);
     }
 
     &::after {
       bottom: calc(50% - 2.5px);
-      transform: rotate(45deg) scalex(1.2);
+      transform: rotate(45deg) scale(1.2);
     }
   }
 }
@@ -58,7 +58,7 @@
   background-color: currentColor;
   transition: $duration;
 
-  .navbar-toggle--triggered & {
+  .navbar-toggle--fired & {
     opacity: 0;
   }
 }

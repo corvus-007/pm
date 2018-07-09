@@ -1,5 +1,5 @@
 .section-intro {
-  padding-bottom: 100px;
+  padding-top: 0;
 
   @include mq-min(1024px) {
     margin-right: $site-offset-x;
@@ -8,7 +8,6 @@
 }
 
 .section-intro__inner {
-
   @include mq-min(1024px) {
     display: flex;
     flex-direction: column;
@@ -31,6 +30,7 @@
 .section-intro__bottom {
   padding: 20px;
   padding-top: 60px;
+  padding-bottom: 0;
 
   @include mq-min(1024px) {
     display: flex;

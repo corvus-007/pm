@@ -14,27 +14,29 @@ body {
   color: $base-color;
   background-color: #ffffff;
   cursor: $cursor-pointer;
+  overflow-x: hidden;
 
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: $site-offset-x;
-    bottom: 0;
-    z-index: 9;
-    opacity: 0;
-    background-color: #fff;
-    visibility: hidden;
-    transition: $duration * 2;
+  @include mq-min(1024px) {
+    .is-nav-hovered {
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: $site-offset-x;
+        bottom: 0;
+        z-index: 9;
+        opacity: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transition: $duration * 2;
+      }
+    }
   }
 }
 
-.is-nav-hovered {
-  &::before {
-    opacity: 1;
-    visibility: visible;
-  }
+.is-navbar-opened {
+  overflow-y: hidden;
 }
 
 .container {

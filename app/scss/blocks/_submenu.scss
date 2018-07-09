@@ -1,11 +1,10 @@
 .submenu {
-  display: none;
+
 }
 
 .submenu__list {
   @include clear-list();
 
-  font-size: rem(40);
   white-space: nowrap;
 }
 
@@ -14,11 +13,19 @@
 }
 
 .submenu__link {
-  color: $base-color;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  color: #c2c2c2;
   text-decoration: none;
+  font-size: rem(15);
 
   &:hover,
   &:focus {
     color: $base-color;
+  }
+
+  @include mq-min(1024px) {
+    font-size: rem(40);
   }
 }

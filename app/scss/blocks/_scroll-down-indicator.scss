@@ -18,9 +18,10 @@
   line-height: 1.15;
   color: #ffffff;
   background-color: #000000;
-  transition: color $duration * 2;
+  transition: $duration * 1.5;
 
-  .scroll-down-indicator--ended & {
-    color: rgba(#ffffff, 0);
+  .is-last-section & {
+    visibility: hidden;
+    opacity: 0;
   }
 }

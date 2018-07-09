@@ -8,6 +8,7 @@
     right: $site-offset-x + 70px;
     bottom: $site-offset-y;
     z-index: 10;
+    padding-bottom: 0;
     pointer-events: none;
   }
 }

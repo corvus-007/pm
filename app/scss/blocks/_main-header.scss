@@ -1,15 +1,31 @@
 .main-header {
   position: fixed;
-  max-width: 100%;
-  top: $site-offset-y;
   left: 0;
   right: 0;
   z-index: 10;
+  max-width: 100%;
+  padding: 20px;
   pointer-events: none;
+  transition: $duration * 2;
 
-  @include mq-min(768px) {
+  @include mq-max(1023px) {
+    filter: invert(100%);
+
+    &--sticky {
+      background-color: #ffffff;
+      filter: invert(0%);
+    }
+
+    .is-navbar-opened & {
+      filter: invert(0%);
+    }
+  }
+
+  @include mq-min(1024px) {
     left: $site-offset-x;
+    top: $site-offset-y;
     right: $site-offset-x + 70px;
+    padding: 0;
   }
 }
 
@@ -27,7 +43,28 @@
   pointer-events: auto;
   transition: $duration * 2;
 
-  .is-nav-hovered & {
+  @include mq-min(1024px) {
+    .is-nav-hovered & {
+      opacity: 0;
+    }
+  }
+}
+
+.main-header__navbar-toggle {
+  @include mq-min(1024px) {
+    display: none;
+  }
+}
+
+.main-header__to-order {
+  transition: $duration * 1.5;
+
+  .is-last-section & {
+    visibility: hidden;
     opacity: 0;
+  }
+
+  @include mq-max(1023px) {
+    display: none;
   }
 }

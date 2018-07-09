@@ -5,7 +5,7 @@
 }
 
 .main-content {
-  @include mq-min(768px) {
+  @include mq-min(1024px) {
     margin-right: $site-offset-x;
   }
 }

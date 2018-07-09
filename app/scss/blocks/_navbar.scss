@@ -1,9 +1,26 @@
 .navbar {
-  @include mq-min(768px) {
-    position: fixed;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: $duration * 2;
+
+  @include mq-max(1023px) {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+
+    &--opened {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @include mq-min(1024px) {
+    left: auto;
     z-index: 10;
     max-height: 100%;
     border-left: 1px solid #c2c2c2;
@@ -15,6 +32,34 @@
   }
 }
 
-.navbar__main-nav {
+.navbar__inner {
   height: 100%;
+  overflow-y: auto;
+
+  @include mq-max(1023px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+
+.navbar__main-nav {
+  @include mq-min(1024px) {
+    height: 100%;
+  }
+}
+
+.navbar__social {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @include mq-min(1024px) {
+    display: none;
+  }
+}
+
+.navbar__to-order {
+  @include mq-min(1024px) {
+    display: none;
+  }
+}
+

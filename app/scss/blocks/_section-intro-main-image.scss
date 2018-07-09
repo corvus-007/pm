@@ -87,7 +87,9 @@
   @include mq-max(1023px) {
     display: flex;
     align-items: flex-end;
-    overflow: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
       display: none;
