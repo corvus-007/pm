@@ -1,29 +1,37 @@
 .section-contact {
+  border-bottom: none;
 }
 
 .section-contact__inner {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  margin-left: $site-offset-x;
-  margin-right: $site-offset-x;
-  padding-top: $site-offset-y * 3;
-  padding-bottom: $site-offset-y * 2;
-  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq-min(1024px) {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: $site-offset-x;
+    margin-right: $site-offset-x;
+    padding-top: $site-offset-y * 3;
+    padding-bottom: $site-offset-y * 2;
+    box-sizing: border-box;
+  }
 }
 
 .section-contact__text {
   @include clear-mr-edges-elem();
 
+  margin-bottom: $gutter * 2;
   font-weight: 600;
-  // font-size: rem(60);
-  font-size: vh(60);
-  line-height: 1.15;
+  font-size: rem(40);
+  line-height: 1;
   box-sizing: border-box;
 
   @include mq-min(1024px) {
     width: 60%;
+    margin-bottom: 0;
     padding-right: 80px;
+    line-height: 1.15;
   }
 
   @include mq-min(1280px) {
