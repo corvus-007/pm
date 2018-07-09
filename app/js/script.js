@@ -4,7 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var destinationItem = null;
 
   $('#fullpage').fullpage({
-
+    onLeave: function (origin, destination) {
+      if (destination.isLast) {
+        $('.scroll-down-indicator').addClass('scroll-down-indicator--ended');
+      } else {
+        $('.scroll-down-indicator').removeClass('scroll-down-indicator--ended');
+      }
+    }
   });
 
   $('.section-intro').on("mousemove", function (e) {
