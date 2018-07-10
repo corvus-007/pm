@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  $('.navbar a').hover(function (e) {
+  $('.main-nav__link, .main-nav__submenu').hover(function (e) {
     $('body').addClass('is-nav-hovered');
   }, function (e) {
     $('body').removeClass('is-nav-hovered');
