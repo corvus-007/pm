@@ -1,7 +1,7 @@
 .scroll-down-indicator {
   position: fixed;
   left: $site-offset-x;
-  right: $site-offset-x + 70px;
+  right: $site-offset-x;
   bottom: $site-offset-y;
   text-align: center;
   z-index: 10;
@@ -21,7 +21,7 @@
   transition: $duration * 1.5;
 
   .is-last-section & {
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
   }
 }
