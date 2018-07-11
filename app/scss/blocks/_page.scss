@@ -1,43 +1,24 @@
 .page {
+  padding: 20px;
+  padding-top: 140px;
+  padding-bottom: 0;
 
-}
-
-.page__content {
-  position: relative;
-}
-
-.page__breadcrumbs {
-  @include make-container();
-
-  min-height: 60px;
-}
-
-.page__headline {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: ($gutter * 2);
-  padding-left: ($gutter / 2);
-  padding-right: ($gutter / 2);
-  text-align: center;
-}
-
-.page__title {
-  margin: 0;
-  margin-bottom: $gutter;
-  line-height: 1.2;
-  font-size: rem(36);
-  font-family: $secondary-font;
-}
-
-.page__intro {
-  font-weight: 300;
-  font-size: rem(20);
-
-  & > :last-child {
-    margin-bottom: 0;
+  @include mq-min(1024px) {
+    padding-top: 150px;
+    padding-right: 70px;
+    padding-left: $site-offset-x;
   }
 }
 
-.page__text {
-  font-size: rem(14);
+.page-title {
+  margin: 0;
+  font-size: rem(36);
+
+  @include mq-min(1024px) {
+    position: absolute;
+    top: 60px;
+    left: $site-offset-x + 240px;
+    font-size: vh(36);
+    line-height: 1.15;
+  }
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Promo Marketing — Городское такси</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  @@include('blocks/navbar.html')
+
+  <div class="site-wrapper">
+    @@include('blocks/main-header.html')
+
+    <main class="main-content">
+      <article class="page work-detail">
+        <header class="work-detail__header">
+          <div class="work-detail__edging">
+            <div class="work-detail__picture-wrapper">
+              <div class="work-detail__picture">
+                <img src="https://images.unsplash.com/photo-1529178983631-23b852df9092?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b8d4a60c424e1ef5adb269a450d841d8&auto=format&fit=crop&w=1350&q=80" alt="">
+              </div>
+            </div>
+            <h1 class="work-detail__title">Городское такси</h1>
+          </div>
+          <a class="work-detail__to-visit" href="" aria-label="Перейти на сайт" target="_blank">
+            <svg class="work-detail__to-visit-icon" width="18" height="18">
+              <use xlink:href="images/symbols.svg#link"></use>
+            </svg>
+          </a>
+        </header>
+        <div class="work-detail__body textual">
+          <h2>Пару слов о проекте</h2>
+          <p>Перед нашей командой стояла задача сделать редизайн существующего сайта службы такси, внести «новую жизнь» в существующую концепцию и сделать его более удобным для пользователя. Идеально, если получится отказаться от мобильной версии сайта в пользу адаптивной реализации.</p>
+          <h2>Процесс</h2>
+          <p>Перед нашей командой стояла задача сделать редизайн существующего сайта службы такси, внести «новую жизнь» в существующую концепцию и сделать его более удобным для пользователя. Идеально, если получится отказаться от мобильной версии сайта в пользу адаптивной реализации.</p>
+          <p>
+            <img src="https://images.unsplash.com/photo-1507074328556-79b5aee4efa5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6306c90528d14d4a614c983390a6e1b2&auto=format&fit=crop&w=1352&q=80" alt="">
+          </p>
+        </div>
+        <footer class="work-detail__footer">
+          <div class="work-detail__query-work">
+            <p><b>Ваш проект следующий?</b></p>
+
+            <p>
+              <button class="amazing-button" data-text="Заказать">
+                <span class="amazing-button__text">Заказать</span>
+              </button>
+            </p>
+          </div>
+          <div class="work-detail__participate work-detail-participate">
+            <ul class="work-detail-participate__list">
+              <li class="work-detail-participate__item">
+                <b class="work-detail-participate__post">Координатор проекта</b>
+                <ul class="work-detail-participate__members">
+                  <li>Сычев Евгений</li>
+                </ul>
+              </li>
+              <li class="work-detail-participate__item">
+                <b class="work-detail-participate__post">Дизайнер</b>
+                <ul class="work-detail-participate__members">
+                  <li>Александр Степанов</li>
+                </ul>
+              </li>
+              <li class="work-detail-participate__item">
+                <b class="work-detail-participate__post">Верстальщик</b>
+                <ul class="work-detail-participate__members">
+                  <li>Денис Васильев</li>
+                </ul>
+              </li>
+              <li class="work-detail-participate__item">
+                <b class="work-detail-participate__post">Программист</b>
+                <ul class="work-detail-participate__members">
+                  <li>Артем Малашенко</li>
+                </ul>
+              </li>
+              <li class="work-detail-participate__item">
+                <b class="work-detail-participate__post">Редактор</b>
+                <ul class="work-detail-participate__members">
+                  <li>Сычев Евгений</li>
+                  <li>Александр Степанов</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="work-detail__social-share work-detail-social-share">
+            soacial share
+          </div>
+        </footer>
+        <a class="work-detail__close" href="works.html">
+          Закрыть
+          <span class="work-detail__close-icon"></span>
+        </a>
+      </article>
+    </main>
+
+    @@include('blocks/main-footer.html')
+  </div>
+
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

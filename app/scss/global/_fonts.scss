@@ -1,12 +1,4 @@
-// Proxima Nova
-
-@font-face {
-  font-family: "proxima_nova";
-  src: url("fonts/proxima_nova/proxima_nova_light-webfont.woff2") format("woff2"), url("fonts/proxima_nova/proxima_nova_light-webfont.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
+// GothamPro
 
 @font-face {
   font-family: GothamPro;
@@ -33,5 +25,14 @@
   font-family: GothamPro;
   src: url("fonts/gothampro/GothamProBlack.woff") format("woff");
   font-weight: 700;
+  font-style: normal
+}
+
+// MinionPro
+
+@font-face {
+  font-family: MinionPro;
+  src: url("fonts/minionpro/MinionPro.woff2") format("woff2"), url("fonts/minionpro/MinionPro.woff") format("woff");
+  font-weight: 400;
   font-style: normal
 }

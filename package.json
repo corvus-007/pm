@@ -28,6 +28,8 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.3.5",
     "fullpage.js": "^3.0.1",
+    "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
     "svg4everybody": "^2.1.9"
   }
 }

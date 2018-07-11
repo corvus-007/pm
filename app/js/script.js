@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
 
-
-  if (window.matchMedia("(max-width: 1023px)").matches) {
+  if (window.matchMedia("(max-width: 1023px)").matches && document.body.classList.contains('homepage')) {
     window.addEventListener('scroll', function () {
       var scrolled = window.pageYOffset || document.documentElement.scrollTop;
       if (scrolled > 0) {
@@ -53,5 +52,4 @@ document.addEventListener('DOMContentLoaded', function () {
   }, function (e) {
     $('body').removeClass('is-nav-hovered');
   });
-
 });

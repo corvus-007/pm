@@ -1,5 +1,5 @@
 .main-header {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   z-index: 10;
@@ -8,24 +8,29 @@
   pointer-events: none;
   transition: $duration * 2;
 
-  @include mq-max(1023px) {
-    filter: invert(100%);
-
-    &--sticky {
-      background-color: #ffffff;
-      filter: invert(0%);
-    }
-
-    .is-navbar-opened & {
-      filter: invert(0%);
-    }
-  }
-
   @include mq-min(1024px) {
     left: $site-offset-x;
     top: $site-offset-y;
     right: $site-offset-x + 70px;
     padding: 0;
+  }
+}
+
+.homepage {
+  @include mq-max(1023px) {
+    .main-header {
+      position: fixed;
+      filter: invert(100%);
+    }
+
+    .main-header--sticky {
+      background-color: #ffffff;
+      filter: invert(0%);
+    }
+
+    &.is-navbar-opened .main-header {
+      filter: invert(0%);
+    }
   }
 }
 

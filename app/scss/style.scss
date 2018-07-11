@@ -22,8 +22,12 @@
 @import "blocks/input";
 @import "blocks/field";
 @import "blocks/table";
+@import "blocks/textual";
+@import "blocks/page";
 @import "blocks/popup";
-// @import "blocks/common-section";
+@import "blocks/filter";
+@import "blocks/cta-form";
+
 @import "blocks/custom-ol";
 @import "blocks/custom-ul";
 @import "blocks/navbar-toggle";
@@ -39,7 +43,11 @@
 @import "blocks/section-contact";
 @import "blocks/clients";
 @import "blocks/section-clients";
-// @import "blocks/page";
+@import "blocks/work-card";
+@import "blocks/works";
+
+@import "blocks/work-detail-participate";
+@import "blocks/work-detail";
 @import "blocks/scroll-down-indicator";
 @import "blocks/main-footer";
 @import "blocks/main-footer-social";

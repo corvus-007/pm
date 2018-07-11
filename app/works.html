@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Promo Marketing — Работы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  @@include('blocks/navbar.html')
+
+  <div class="site-wrapper">
+    @@include('blocks/main-header.html')
+
+    <main class="main-content">
+      <article class="page works">
+        <h1 class="page-title">Работы</h1>
+
+        <div class="works__filter filter">
+          <ul class="filter__list hidden-tablet-down">
+            <li><a href="#" data-filter="*">Все работы</a></li>
+            <li><a href="#" data-filter="sites">Сайты</a></li>
+            <li><a href="#" data-filter="smm">SMM</a></li>
+            <li><a href="#" data-filter="seo">SEO-продвижение</a></li>
+            <li><a href="#" data-filter="ads">Реклама</a></li>
+          </ul>
+
+          <form class="filter__form" action="/" method="get">
+            <select class="filter__select">
+              <option value="*">Все работы</option>
+              <option value="sites">Сайты</option>
+              <option value="smm">SMM</option>
+              <option value="seo">SEO-продвижение</option>
+              <option value="ads">Реклама</option>
+            </select>
+          </form>
+        </div>
+
+        <ul class="works__list">
+          <li class="works__item work-card sites ads n1">
+            <div class="work-card__picture">
+              <img class="work-card__image" src="https://images.unsplash.com/photo-1531114181037-5e61a592cf2a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=23dbfaafedbf9400522ef9c47334f99a&auto=format&fit=crop&w=1350&q=80" alt="Гринвуд">
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Гринвуд</h2>
+              <div class="work-card__info">
+                <p class="work-card__description">Жилой комплекс премиум-класса</p>
+                <p class="work-card__tags">сайт, реклама</p>
+              </div>
+              <div class="work-card__actions">
+                <a class="work-card__to-show amazing-button" href="one-work.html" data-text="Смотреть">
+                  <span class="amazing-button__text">Смотреть</span>
+                </a>
+                <a href="" class="work-card__to-visit" aria-label="Перейти на сайт" target="_blank">
+                  <svg class="work-card__to-visit__icon" width="18" height="18">
+                    <use xlink:href="images/symbols.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="works__item work-card work-card--reverse sites ads n2">
+            <div class="work-card__picture">
+              <img class="work-card__image" src="https://images.unsplash.com/photo-1531130744926-1d86103aebeb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=28f240aae3de685fc4742f09c922f6f8&auto=format&fit=crop&w=1414&q=80" alt="Городское такси">
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Городское такси</h2>
+              <div class="work-card__info">
+                <p class="work-card__description">Пожалуй, лучшая служба такси в брянске</p>
+                <p class="work-card__tags">сайт, реклама</p>
+              </div>
+              <div class="work-card__actions">
+                <a class="work-card__to-show amazing-button" href="one-work.html" data-text="Смотреть">
+                  <span class="amazing-button__text">Смотреть</span>
+                </a>
+                <a href="" class="work-card__to-visit" aria-label="Перейти на сайт" target="_blank">
+                  <svg class="work-card__to-visit__icon" width="18" height="18">
+                    <use xlink:href="images/symbols.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="works__item work-card sites n3">
+            <div class="work-card__picture">
+              <img class="work-card__image" src="https://images.unsplash.com/photo-1531128593464-71b75edf4582?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b2415bb0f843587522e267fed773039a&auto=format&fit=crop&w=634&q=80" alt="Доберман">
+            </div>
+            <div class="work-card__body">
+              <h2 class="work-card__title">Доберман</h2>
+              <div class="work-card__info">
+                <p class="work-card__description">Брутальный фитнес-центр</p>
+                <p class="work-card__tags">сайт</p>
+              </div>
+              <div class="work-card__actions">
+                <a class="work-card__to-show amazing-button" href="one-work.html" data-text="Смотреть">
+                  <span class="amazing-button__text">Смотреть</span>
+                </a>
+                <a href="" class="work-card__to-visit" aria-label="Перейти на сайт" target="_blank">
+                  <svg class="work-card__to-visit__icon" width="18" height="18">
+                    <use xlink:href="images/symbols.svg#link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <div class="cta-form">
+        <form action="" method="post">
+          <p class="cta-form__title">
+            Не нашли своей компании в списке?
+            <b>Пора стать нашим клиентом!</b>
+          </p>
+          <div class="cta-form__field field">
+            <label class="field__label visually-hidden" for="field-name">Имя</label>
+            <div class="field__control">
+              <input class="field__input input input--fill-white" type="text" id="field-name" name="name" placeholder="Имя">
+            </div>
+          </div>
+          <div class="cta-form__field field">
+            <label class="field__label visually-hidden" for="field-phone">Телефон</label>
+            <div class="field__control">
+              <input class="field__input input input--fill-white" type="tel" id="field-phone" name="phone" placeholder="Телефон" required>
+            </div>
+          </div>
+          <button class="cta-form__to-submit amazing-button" data-text="Отправить">
+            <span class="amazing-button__text">Отправить</span>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    @@include('blocks/main-footer.html')
+  </div>
+
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

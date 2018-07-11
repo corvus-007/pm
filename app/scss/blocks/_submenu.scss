@@ -10,7 +10,6 @@
   @include clear-list();
 
   @include mq-min(1024px) {
-    padding-left: 50px;
     padding-right: $site-offset-x;
     background-color: #ffffff;
   }
@@ -37,7 +36,7 @@
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  color: #c2c2c2;
+  color: $gray-194;
   transition: $duration;
 
   &:hover,

@@ -1,0 +1,53 @@
+.filter {
+  @include mq-min(1024px) {
+    margin-left: 240px;
+  }
+}
+
+.filter__list {
+  @include clear-list();
+
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    font-weight: 600;
+    font-size: rem(12);
+    padding: 10px;
+    text-decoration: none;
+    color: $gray-194;
+    transition: $duration * 2;
+
+    &:hover,
+    &:focus {
+      color: $base-color;
+    }
+  }
+
+  .current a {
+    color: $base-color;
+    pointer-events: none;
+  }
+
+  @include mq-min(1024px) {
+    a {
+      font-size: vh(12);
+    }
+  }
+}
+
+.filter__form {
+  display: none;
+  @include mq-min(1024px) {
+    display: none;
+  }
+}

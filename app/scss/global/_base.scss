@@ -50,11 +50,15 @@ body {
 a {
   color: $link-color;
   outline: none;
-  cursor: $cursor-pointer-active;
 
   &:hover {
     color: mix(#000, $link-color, 10%);
   }
+}
+
+a,
+button {
+  cursor: $cursor-pointer-active;
 }
 
 h1,

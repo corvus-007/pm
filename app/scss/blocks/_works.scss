@@ -1,0 +1,32 @@
+.works {
+
+}
+
+.works__filter {
+  margin-bottom: 65px;
+}
+
+.works__list {
+  @include clear-list();
+}
+
+.works__item {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $light-color;
+
+  @include mq-min(1024px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10vh;
+    padding-bottom: 0;
+    border-bottom: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

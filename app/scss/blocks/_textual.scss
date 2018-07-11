@@ -1,0 +1,78 @@
+.textual {
+  line-height: 1.45;
+  font-size: rem(17);
+  font-family: $secondary-font;
+  text-transform: none;
+  letter-spacing: 0;
+
+  & > * + *:not(li) {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: rem(19);
+  }
+
+  & > * + h2 {
+    margin-top: 2.25rem;
+    margin-bottom: 2rem;
+  }
+
+  & > * + h3 {
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  & > h2 + * {
+    margin-top: 0.75rem;
+  }
+
+  & > h3 + * {
+    margin-top: 0.75rem;
+  }
+
+  & > h4 + * {
+    margin-top: 0.8rem;
+  }
+
+  & > h2 + h3 {
+    margin-top: 0.9rem;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq-min(1024px) {
+    font-size: vh(15);
+
+    h2 {
+      font-size: vh(18);
+    }
+
+    .alignleft {
+      float: left;
+      margin-right: $gutter;
+    }
+
+    .alignright {
+      float: right;
+      margin-left: $gutter;
+    }
+  }
+}

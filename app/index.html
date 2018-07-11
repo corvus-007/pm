@@ -28,7 +28,9 @@
   <link rel="preload" href="images/section-intro-main-images/19.jpg" as="image" media="(min-width: 1024px)">
   <link rel="preload" href="images/section-intro-main-images/20.jpg" as="image" media="(min-width: 1024px)"> -->
 </head>
-<body>
+<body class="homepage">
+  @@include('blocks/navbar.html')
+
   <div class="site-wrapper">
     @@include('blocks/main-header.html')
 
@@ -190,8 +192,6 @@
 
     @@include('blocks/main-footer.html')
   </div>
-
-  @@include('blocks/navbar.html')
 
   @@include('blocks/site-scripts.html')
 </body>

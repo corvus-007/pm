@@ -1,0 +1,50 @@
+.work-detail-participate {
+  padding: 20px;
+  background-color: $gray-245;
+}
+
+.work-detail-participate__list {
+  @include clear-list();
+
+  @include mq-min(1024px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.work-detail-participate__item {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+  @include mq-min(1024px) {
+    width: 20%;
+    padding-left: 5px;
+  }
+}
+
+.work-detail-participate__post {
+  display: block;
+  font-weight: 600;
+  font-size: rem(12);
+  text-transform: lowercase;
+
+  @include mq-min(1024px) {
+    font-size: vh(12);
+  }
+}
+
+.work-detail-participate__members {
+  @include clear-list();
+
+  font-weight: 400;
+  font-size: rem(15);
+  text-transform: none;
+
+  li {
+
+  }
+
+  @include mq-min(1024px) {
+    font-size: vh(15);
+  }
+}
