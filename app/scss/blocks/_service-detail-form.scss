@@ -1,0 +1,41 @@
+.service-detail-form {
+  position: relative;
+
+  @include mq-min(1024px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: vh(45);
+    padding-left: $site-offset-x;
+    padding-right: $site-offset-x;
+    box-sizing: border-box;
+    border: 1px solid;
+  }
+}
+
+.service-detail-form__title {
+  margin: 0;
+  margin-bottom: vh(35);
+  text-align: center;
+  font-size: rem(18);
+
+  @include mq-min(1024px) {
+    font-size: vh(18);
+    line-height: vh(21);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    margin-top: vh(-10.5);
+  }
+}
+
+.service-detail-form__actions {
+  margin-top: vh(35);
+  align-self: center;
+
+  @include mq-min(1024px) {
+    margin-bottom: vh(-13.8 - 6); // половина высоты кнопки и паддинг
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+  }
+}

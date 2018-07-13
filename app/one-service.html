@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Promo Marketing — Маркетинговый анализ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  @@include('blocks/navbar.html')
+
+  <div class="site-wrapper">
+    @@include('blocks/main-header.html')
+
+    <main class="main-content">
+      <article class="page service-detail">
+        <header class="service-detail__header">
+          <div class="service-detail__edging">
+            <div class="service-detail__picture">
+              <img src="https://images.unsplash.com/photo-1529178983631-23b852df9092?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b8d4a60c424e1ef5adb269a450d841d8&auto=format&fit=crop&w=1350&q=80" alt="">
+            </div>
+            <h1 class="service-detail__title">Маркетинговый анализ</h1>
+          </div>
+        </header>
+        <div class="service-detail__body textual">
+          <p>АМК «Промо-Маркетинг» предлагает услуги сео-аудитов сайтов и проверки их на технические и поисковые ошибки. Устранение ошибок, выявленных в ходе анализа, позволяет улучшить качество ресурса для пользователя и более корректно ранжировать его поисковыми системами.</p>
+
+          <p>Срок выполнения от 10 рабочих дней, стоимость зависит от размера веб-ресурса и списка продвигаемых запросов</p>
+          <h2>Стоимость маркетингового анализа</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Количество страниц</th>
+                <th>Стоимость</th>
+                <th>Сроки</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>5–10 страниц</td>
+                <td>до 10 000 руб.</td>
+                <td>до 10 дней</td>
+              </tr>
+              <tr>
+                <td>100–500 страниц</td>
+                <td>15 000 руб.</td>
+                <td>до 15 дней</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>Среди наших клиентов, которые уже заказали услугу аудита и заметно увеличили рост продаж — интернет-магазины, корпоративные и сайты услуг, а также презентационные ресурсы (визитка).</p>
+
+          <h2>Критерии оценки коммерческих сайтов по мнению Яндекса</h2>
+          <p>Сотрудники поисковой системы Яндекс выделяют следующие характеристики, оказывающие влияние на маркетинговую привлекательность ресурса:</p>
+
+          <ul>
+            <li>Ассортимент товаров / услуг. Возможность выбора для посетителя в рамках своих потребностей.</li>
+            <li>Доверие. Насколько сайт и стоящий за ним бизнес пользуется доверием у клиентов.</li>
+            <li>Удобство выбора. Насколько удобно пользоваться посетителю ресурсом при выборе товара / услуги.</li>
+            <li>Качество услуги. Насколько быстро, удобно и выгодно посетитель может осуществить на сайте транзакцию (купить, позвонить, отправить сообщение).</li>
+            <li>Профессиональность дизайна.</li>
+          </ul>
+        </div>
+        <footer class="service-detail__footer">
+          <form class="service-detail-form" action="" method="post">
+            <h2 class="service-detail-form__title">Заказать маркетинговый анализ со скидкой 10%</h2>
+            <div class="field">
+              <label class="field__label visually-hidden" for="field-name">Имя</label>
+              <div class="field__control">
+                <input class="field__input input" type="text" id="field-name" name="name" placeholder="Имя">
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label visually-hidden" for="field-phone">Телефон</label>
+              <div class="field__control">
+                <input class="field__input input" type="tel" id="field-phone" name="phone" placeholder="Телефон" required>
+              </div>
+            </div>
+            <div class="service-detail-form__actions form-actions form-actions--justify-center">
+              <button class="amazing-button" data-text="Отправить">
+                <span class="amazing-button__text">Отправить</span>
+              </button>
+            </div>
+          </form>
+        </footer>
+        <a class="service-detail__to-back" href="services.html">
+          Вернуться
+          <span class="service-detail__to-back-icon"></span>
+        </a>
+      </article>
+    </main>
+
+    @@include('blocks/main-footer.html')
+  </div>
+
+  @@include('blocks/site-scripts.html')
+</body>
+</html>
