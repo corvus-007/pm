@@ -1,0 +1,13 @@
+.contacts-info-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts-info-socials__link {
+  margin-bottom: vh(20);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

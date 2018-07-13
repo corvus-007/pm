@@ -1,0 +1,48 @@
+.contacts-info {
+
+}
+
+.contacts-info__list {
+  @include clear-list();
+
+  display: table;
+}
+
+.contacts-info__item {
+  display: table-row;
+}
+
+.contacts-info__label {
+  display: table-cell;
+  padding-bottom: vh(55);
+  padding-right: 20px;
+  text-align: right;
+  font-weight: 500;
+  font-size: rem(12);
+  box-sizing: border-box;
+
+  .contacts-info__item--dense & {
+    padding-bottom: vh(20);
+  }
+
+  @include mq-min(1024px) {
+    min-width: vh(230);
+    font-size: vh(11);
+    text-align: left;
+  }
+}
+
+.contacts-info__value {
+  display: table-cell;
+  padding-bottom: vh(55);
+  font-weight: 600;
+  font-size: rem(15);
+
+  .contacts-info__item--dense & {
+    padding-bottom: vh(20);
+  }
+
+  @include mq-min(1024px) {
+    font-size: vh(15);
+  }
+}

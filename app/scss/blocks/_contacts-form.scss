@@ -1,0 +1,17 @@
+.contacts-form {
+
+}
+
+.contacts-form__text {
+  margin-bottom: 20px;
+  font-size: rem(12);
+
+  @include mq-min(1024px) {
+    position: absolute;
+    top: calc(60px + 0.5vh);
+    max-width: vh(340);
+    margin: 0;
+    padding-right: 145px;
+    font-size: vh(11);
+  }
+}

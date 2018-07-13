@@ -1,0 +1,24 @@
+.contacts {
+
+}
+
+.contacts__inner {
+  @include mq-min(1024px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contacts__info {
+  @include mq-min(1024px) {
+    width: 53.3%;
+    margin-right: 70px;
+    flex-shrink: 0;
+  }
+}
+
+.contacts__form {
+  @include mq-min(1024px) {
+    flex-grow: 1;
+  }
+}
