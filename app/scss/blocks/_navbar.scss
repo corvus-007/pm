@@ -44,14 +44,18 @@
 }
 
 .navbar__main-nav {
+  @include mq-max(1023px) {
+    padding-top: vh(50);
+  }
+
   @include mq-min(1024px) {
     height: 100%;
   }
 }
 
 .navbar__social {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: vh(50);
+  margin-bottom: vh(50);
 
   @include mq-min(1024px) {
     display: none;

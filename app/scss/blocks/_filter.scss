@@ -1,6 +1,7 @@
 .filter {
   @include mq-min(1024px) {
     margin-left: 240px;
+    margin-left: vh(230);
   }
 }
 
@@ -20,17 +21,12 @@
 
   a {
     display: block;
+    padding: 10px;
     font-weight: 600;
     font-size: rem(12);
-    padding: 10px;
     text-decoration: none;
     color: $gray-194;
     transition: $duration * 2;
-
-    &:hover,
-    &:focus {
-      color: $base-color;
-    }
   }
 
   .current a {
@@ -41,12 +37,18 @@
   @include mq-min(1024px) {
     a {
       font-size: vh(12);
+
+      &:hover,
+      &:focus {
+        color: $base-color;
+      }
     }
   }
 }
 
 .filter__form {
   display: none;
+
   @include mq-min(1024px) {
     display: none;
   }

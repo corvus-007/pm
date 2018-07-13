@@ -58,6 +58,25 @@
     margin-right: auto;
   }
 
+  ul {
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -1em;
+        top: 0;
+        z-index: -1;
+        width: em(20, 16);
+        height: em(20, 16);
+        border-radius: 50%;
+        background-color: $warning-color;
+        box-sizing: border-box;
+      }
+    }
+  }
+
   @include mq-min(1024px) {
     font-size: vh(15);
 

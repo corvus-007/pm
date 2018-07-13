@@ -16,11 +16,11 @@
 
     <main class="main-content">
       <article class="page works">
-        <h1 class="page-title">Работы</h1>
+        <h1 class="page__title">Работы</h1>
 
         <div class="works__filter filter">
           <ul class="filter__list hidden-tablet-down">
-            <li><a href="#" data-filter="*">Все работы</a></li>
+            <li class="current"><a href="#" data-filter="*">Все работы</a></li>
             <li><a href="#" data-filter="sites">Сайты</a></li>
             <li><a href="#" data-filter="smm">SMM</a></li>
             <li><a href="#" data-filter="seo">SEO-продвижение</a></li>
@@ -107,29 +107,27 @@
           </li>
         </ul>
       </article>
-      <div class="cta-form">
-        <form action="" method="post">
-          <p class="cta-form__title">
-            Не нашли своей компании в списке?
-            <b>Пора стать нашим клиентом!</b>
-          </p>
-          <div class="cta-form__field field">
-            <label class="field__label visually-hidden" for="field-name">Имя</label>
-            <div class="field__control">
-              <input class="field__input input input--fill-white" type="text" id="field-name" name="name" placeholder="Имя">
-            </div>
+      <form class="cta-form" action="" method="post">
+        <p class="cta-form__title">
+          Не нашли своей компании в списке?
+          <b>Пора стать нашим клиентом!</b>
+        </p>
+        <div class="cta-form__field field">
+          <label class="field__label visually-hidden" for="field-name">Имя</label>
+          <div class="field__control">
+            <input class="field__input input input--fill-white" type="text" id="field-name" name="name" placeholder="Имя">
           </div>
-          <div class="cta-form__field field">
-            <label class="field__label visually-hidden" for="field-phone">Телефон</label>
-            <div class="field__control">
-              <input class="field__input input input--fill-white" type="tel" id="field-phone" name="phone" placeholder="Телефон" required>
-            </div>
+        </div>
+        <div class="cta-form__field field">
+          <label class="field__label visually-hidden" for="field-phone">Телефон</label>
+          <div class="field__control">
+            <input class="field__input input input--fill-white" type="tel" id="field-phone" name="phone" placeholder="Телефон" required>
           </div>
-          <button class="cta-form__to-submit amazing-button" data-text="Отправить">
-            <span class="amazing-button__text">Отправить</span>
-          </button>
-        </form>
-      </div>
+        </div>
+        <button class="cta-form__to-submit amazing-button" data-text="Отправить">
+          <span class="amazing-button__text">Отправить</span>
+        </button>
+      </form>
     </main>
 
     @@include('blocks/main-footer.html')

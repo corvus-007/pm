@@ -39,13 +39,13 @@
   color: $gray-194;
   transition: $duration;
 
-  &:hover,
-  &:focus {
-    color: $base-color;
-  }
-
   @include mq-min(1024px) {
     font-size: vh(40);
     text-align: right;
+
+    &:hover,
+    &:focus {
+      color: $base-color;
+    }
   }
 }

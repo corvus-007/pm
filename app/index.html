@@ -152,36 +152,34 @@
           <div class="section-contact__text">
             <p>Чтобы увеличить продажи, просто заполните заявку</p>
           </div>
-          <div class="section-contact__form section-contact-form">
-            <form action="">
-              <div class="section-contact-form__text">
-                <p>Бдыщь! Заполните поля формы, наш менеджер оперативно свяжется с вами и начнется магия</p>
+          <form class="section-contact__form section-contact-form" action="" method="post">
+            <p class="section-contact-form__text">
+              Бдыщь! Заполните поля формы, наш менеджер оперативно свяжется с вами и начнется магия
+            </p>
+            <div class="field">
+              <label class="field__label visually-hidden" for="field-name">Имя</label>
+              <div class="field__control">
+                <input class="field__input input" type="text" id="field-name" name="name" placeholder="Имя">
               </div>
-              <div class="field">
-                <label class="field__label visually-hidden" for="field-name">Имя</label>
-                <div class="field__control">
-                  <input class="field__input input" type="text" id="field-name" name="name" placeholder="Имя">
-                </div>
+            </div>
+            <div class="field">
+              <label class="field__label visually-hidden" for="field-phone">Телефон</label>
+              <div class="field__control">
+                <input class="field__input input" type="tel" id="field-phone" name="phone" placeholder="Телефон" required>
               </div>
-              <div class="field">
-                <label class="field__label visually-hidden" for="field-phone">Телефон</label>
-                <div class="field__control">
-                  <input class="field__input input" type="tel" id="field-phone" name="phone" placeholder="Телефон" required>
-                </div>
+            </div>
+            <div class="field">
+              <label class="field__label visually-hidden" for="field-message">Сообщение</label>
+              <div class="field__control">
+                <textarea class="field__input input" id="field-message" name="message" rows="4" placeholder="Сообщение"></textarea>
               </div>
-              <div class="field">
-                <label class="field__label visually-hidden" for="field-message">Сообщение</label>
-                <div class="field__control">
-                  <textarea class="field__input input" id="field-message" name="message" rows="4" placeholder="Сообщение"></textarea>
-                </div>
-              </div>
-              <div class="section-contact-form__actions form-actions form-actions--justify-end">
-                <button class="amazing-button" data-text="Отправить">
-                  <span class="amazing-button__text">Отправить</span>
-                </button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <div class="section-contact-form__actions form-actions form-actions--justify-end">
+              <button class="amazing-button" data-text="Отправить">
+                <span class="amazing-button__text">Отправить</span>
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>

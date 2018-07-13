@@ -3,13 +3,12 @@
 }
 
 .section-contact-form__text {
-  @include clear-mr-edges-elem();
-
   max-width: 350px;
+  margin: 0;
   margin-bottom: 35px;
-  font-size: rem(11);
+  font-size: rem(12);
 
-  @include mq-min(768px) {
+  @include mq-min(1024px) {
     font-size: vh(11);
   }
 }

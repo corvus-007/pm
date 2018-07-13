@@ -5,9 +5,11 @@
 }
 
 .main-content {
-  flex-grow: 1;
-
   @include mq-min(1024px) {
-    margin-right: $site-offset-x;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-right: vh(75);
+    margin-right: vh(75);
   }
 }

@@ -1,0 +1,29 @@
+.slide-link {
+  position: relative;
+  display: inline-flex;
+  text-decoration: none;
+  color: $base-color;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+  }
+}
+
+.slide-link__text {
+  display: block;
+  transition: transform $duration * 1.5;
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    display: block;
+  }
+
+  .slide-link:hover &,
+  .slide-link:focus & {
+    transform: translateY(-100%);
+  }
+}

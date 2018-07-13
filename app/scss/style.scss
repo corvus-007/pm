@@ -18,6 +18,7 @@
 // Blocks
 @import "blocks/button";
 @import "blocks/amazing-button";
+@import "blocks/slide-link";
 @import "blocks/form";
 @import "blocks/input";
 @import "blocks/field";
@@ -28,26 +29,40 @@
 @import "blocks/filter";
 @import "blocks/cta-form";
 
-@import "blocks/custom-ol";
-@import "blocks/custom-ul";
-@import "blocks/navbar-toggle";
+// @import "blocks/custom-ol";
+// @import "blocks/custom-ul";
 @import "blocks/main-header";
 @import "blocks/submenu";
 @import "blocks/main-nav";
+@import "blocks/navbar-toggle";
 @import "blocks/navbar-social";
 @import "blocks/navbar";
+@import "blocks/scroll-down-indicator";
+
 @import "blocks/homepage-section";
+
 @import "blocks/section-intro-main-image";
 @import "blocks/section-intro";
+
 @import "blocks/section-contact-form";
 @import "blocks/section-contact";
+
 @import "blocks/clients";
 @import "blocks/section-clients";
+
 @import "blocks/work-card";
 @import "blocks/works";
 
 @import "blocks/work-detail-participate";
 @import "blocks/work-detail";
-@import "blocks/scroll-down-indicator";
+
+@import "blocks/service-detail-form";
+@import "blocks/service-detail";
+
+@import "blocks/contacts-info-socials";
+@import "blocks/contacts-info";
+@import "blocks/contacts-form";
+@import "blocks/contacts";
+
 @import "blocks/main-footer";
 @import "blocks/main-footer-social";

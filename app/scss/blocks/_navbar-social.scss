@@ -19,36 +19,5 @@
 
 .navbar-social__link {
   position: relative;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  color: $base-color;
   font-size: rem(12);
-  overflow: hidden;
-  cursor: $cursor-pointer-active;
-
-  &:hover,
-  &:focus {
-    color: $base-color;
-    cursor: $cursor-pointer-active;
-  }
-}
-
-.navbar-social__text-link {
-  display: block;
-  transition: transform $duration * 1.5;
-
-  &::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 100%;
-    display: block;
-    left: 0;
-    right: 0;
-  }
-
-  .navbar-social__link:hover &,
-  .navbar-social__link:focus & {
-    transform: translateY(-100%);
-  }
 }

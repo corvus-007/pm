@@ -102,10 +102,18 @@
 
   @include mq-max(1023px) {
     max-width: none;
-    height: 35vw;
+    height: 30vw;
+    flex-shrink: 0;
     padding-left: 20vw;
     padding-right: 20vw;
-    flex-shrink: 0;
     transform: translateY(3px);
+  }
+
+  @include mq-max(735px) {
+    height: 25vw;
+  }
+
+  @include mq-max(567px) {
+    height: 35vw;
   }
 }

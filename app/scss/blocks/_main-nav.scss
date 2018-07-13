@@ -1,7 +1,4 @@
 .main-nav {
-  @include mq-max(1023px) {
-    padding-top: 50px;
-  }
 }
 
 .main-nav__list {
@@ -58,12 +55,16 @@
     padding: 15px 0;
     font-weight: 500;
     font-size: rem(12);
-    line-height: 75px;
+    line-height: vh(75);
 
     .main-nav__item:hover &,
     &:hover {
       color: $base-color;
     }
+  }
+
+  @include mq-min(1440px) {
+    font-size: vh(13);
   }
 }
 
@@ -95,7 +96,6 @@
     display: block;
     transform: translate(100%, -50%);
     font-weight: 700;
-    font-size: rem(90);
     font-size: vh(90);
     text-transform: uppercase;
     background-color: #ffffff;

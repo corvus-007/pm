@@ -1,22 +1,23 @@
 .main-footer {
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   font-size: rem(11);
 
   @include mq-min(1024px) {
-    padding-left: $site-offset-x;
-    padding-top: $site-offset-y;
-    padding-right: $site-offset-x + 70px;
-    padding-bottom: $site-offset-y;
     z-index: 10;
+    padding-left: vh(75);
+    padding-right: vh(75 + 70);
   }
 }
 
 .homepage .main-footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
+  @include mq-min(1024px) {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
 }
 
 .main-footer__inner {
@@ -24,11 +25,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @include mq-min(1024px) {
     flex-direction: row;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

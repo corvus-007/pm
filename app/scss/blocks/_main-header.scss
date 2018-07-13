@@ -9,9 +9,9 @@
   transition: $duration * 2;
 
   @include mq-min(1024px) {
-    left: $site-offset-x;
+    left: vh(75);
     top: $site-offset-y;
-    right: $site-offset-x + 70px;
+    right: vh(75 + 70);
     padding: 0;
   }
 }
@@ -36,8 +36,8 @@
 
 .main-header__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .main-header__logo {
@@ -67,6 +67,10 @@
   .is-last-section & {
     visibility: hidden;
     opacity: 0;
+  }
+
+  .contacts-page & {
+    display: none;
   }
 
   @include mq-max(1023px) {

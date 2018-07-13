@@ -57,7 +57,7 @@
 .section-clients__text {
   margin: 0;
   margin-bottom: 20px;
-  font-size: rem(11);
+  font-size: rem(12);
 
   @include mq-min(1024px) {
     display: none;
