@@ -29,7 +29,7 @@ $context-default: $font-size;
   @return ($target / $context) * 1rem;
 }
 
-@function vh($target, $viewportHeight: 800) {
+@function vh($target, $viewportHeight: 770) {
   // высота шрифта в макете / высота макета * 100 + vh
   @return ($target / $viewportHeight) * 100vh;
 }
