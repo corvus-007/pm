@@ -61,10 +61,17 @@
     min-width: 10vw;
     margin-right: 5vw;
     text-align: center;
+    transition: $duration * 3 $duration * 1.5 cubic-bezier(0.6, 0, 0.4, 1);
 
     &:last-child {
       margin-right: 0;
     }
+  }
+}
+
+@include mq-min(1024px) {
+  .section-clients:not(.active) .clients__item {
+    margin-bottom: vh(50);
   }
 }
 
@@ -105,9 +112,6 @@
   max-width: 260px;
   margin: 0;
   font-size: vh(11);
-}
-
-.clients__item-title {
 }
 
 .clients__item-text {

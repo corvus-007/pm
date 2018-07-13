@@ -11,8 +11,8 @@
     display: flex;
     align-items: center;
     height: 100%;
-    margin-left: $site-offset-x;
-    margin-right: $site-offset-x;
+    margin-left: vh(75);
+    margin-right: vh(75);
     padding-top: $site-offset-y * 3;
     padding-bottom: $site-offset-y * 2;
     padding-left: 0;
@@ -29,6 +29,7 @@
   font-size: rem(36);
   line-height: 1;
   box-sizing: border-box;
+  transition: $duration * 3 $duration * 1.5 cubic-bezier(0.6, 0, 0.4, 1.2);
 
   @include mq-min(1024px) {
     width: 60%;
@@ -41,6 +42,13 @@
   @include mq-min(1280px) {
     width: 50%;
     padding-right: 150px;
+  }
+}
+
+@include mq-min(1024px) {
+  .section-contact:not(.active) .section-contact__text {
+    line-height: 1;
+    margin-bottom: vh(20);
   }
 }
 

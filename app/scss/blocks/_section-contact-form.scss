@@ -1,5 +1,7 @@
 .section-contact-form {
-
+  .field {
+    transition: $duration * 3 $duration * 1.5 cubic-bezier(0.6, 0, 0.4, 1);
+  }
 }
 
 .section-contact-form__text {
@@ -10,5 +12,13 @@
 
   @include mq-min(1024px) {
     font-size: vh(11);
+  }
+}
+
+@include mq-min(1024px) {
+  .section-contact:not(.active) .section-contact-form {
+    .field {
+      margin-bottom: vh(40);
+    }
   }
 }

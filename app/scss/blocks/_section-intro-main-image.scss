@@ -98,7 +98,8 @@
 }
 
 .section-intro-main-image__image-text {
-    max-width: 50%;
+  max-width: 50%;
+  transition: $duration * 3 $duration * 1.5 cubic-bezier(0.6, 0, 0.4, 1);
 
   @include mq-max(1023px) {
     max-width: none;
@@ -115,5 +116,11 @@
 
   @include mq-max(567px) {
     height: 35vw;
+  }
+}
+
+@include mq-min(1024px) {
+  .section-intro:not(.active) .section-intro-main-image__image-text {
+    max-width: 60%;
   }
 }

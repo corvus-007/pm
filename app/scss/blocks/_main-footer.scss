@@ -2,6 +2,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   font-size: rem(11);
+  pointer-events: none;
 
   @include mq-min(1024px) {
     z-index: 10;
@@ -16,7 +17,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    pointer-events: none;
   }
 }
 
