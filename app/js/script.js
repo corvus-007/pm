@@ -17,10 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
     $('body').toggleClass('is-navbar-opened');
     $('.navbar').toggleClass('navbar--opened');
     $('.navbar-toggle').toggleClass('navbar-toggle--fired');
-  })
+  });
 
   if (window.matchMedia("(min-width: 1024px)").matches) {
     $('#fullpage').fullpage({
+      scrollingSpeed: 1100,
       onLeave: function (origin, destination) {
         if (destination.isLast) {
           $('body').addClass('is-last-section');
