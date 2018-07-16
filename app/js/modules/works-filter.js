@@ -6,14 +6,9 @@ window.worksFilter = (function () {
   // var $filterSelect = $('.filter__select');
 
   function getHashFilter() {
-    // var hash = location.hash;
     // get filter=filterName
     var matches = location.hash.match(/filter=([^&]+)/i);
     var hashFilter = matches && matches[1];
-
-    if (!hashFilter) {
-      return '*';
-    }
     return hashFilter && decodeURIComponent(hashFilter);
   }
 
@@ -23,29 +18,24 @@ window.worksFilter = (function () {
     var isIsotopeInit = false;
 
     $grid.imagesLoaded(function () {
+      $('.work-card').addClass('work-card--filtered');
       $filters = $filter.on('click', 'a', function (event) {
         event.preventDefault();
         var filterAttr = $(this).data('filter');
         // set filter in hash
         location.hash = 'filter=' + encodeURIComponent(filterAttr);
+        $('.work-card').removeClass('work-card--filtered');
       });
 
+      $(window).on('hashchange', onHashchange);
+      // trigger event handler to init Isotope
       onHashchange();
     });
-
-    // $filters = $filterSelect.on('change', function (event) {
-    //   event.preventDefault();
-    //   var filterAttr = this.value;
-    //   // console.log(filterAttr)
-    //   // set filter in hash
-    //   location.hash = 'filter=' + encodeURIComponent(filterAttr);
-    // });
   }
 
   // bind filter button click
   function onHashchange() {
     var hashFilter = getHashFilter();
-    hashFilter = (hashFilter != '*') ? hashFilter : 'work-card';
     if (!hashFilter && isIsotopeInit) {
       return;
     }
@@ -56,16 +46,21 @@ window.worksFilter = (function () {
       percentPosition: true,
       stagger: 30,
       itemSelector: '.work-card',
-      filter: '.' + hashFilter,
-      hiddenStyle: {
-        opacity: 0
-      },
-      visibleStyle: {
-        opacity: 1
-      }
+      filter: hashFilter,
+      transitionDuration: 0,
     });
-    $grid.on('arrangeComplete', function(event, filteredItems) {
+
+    $grid.on('arrangeComplete', function (event, filteredItems) {
       console.log(filteredItems);
+
+      $('.work-card').removeClass('work-card--filtered');
+      $(filteredItems).each(function () {
+        $(this.element).addClass('work-card--filtered');
+      });
+    });
+
+    $grid.on('layoutComplete', function (event, laidOutItems) {
+      window.worksList.findActiveSection();
     });
     // set selected class on button
     if (hashFilter) {
@@ -73,7 +68,4 @@ window.worksFilter = (function () {
       $filters.find('[data-filter="' + hashFilter + '"]').closest('li').addClass('current');
     }
   }
-
-  $(window).on('hashchange', onHashchange);
-  // trigger event handler to init Isotope
 })();

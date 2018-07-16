@@ -9,7 +9,7 @@ window.worksList = (function () {
   }
 
   var getVH = function (val) {
-    return (val / 810) * $(window).height();
+    return (val / 800) * $(window).height();
   };
 
   var findActiveSection = function () {
@@ -18,8 +18,8 @@ window.worksList = (function () {
     }
 
     var sections = {};
-    var min = Math.abs($(window).scrollTop() - $('.work-card').first().offset().top);
-    $('.work-card').each(function (num, el) {
+    var min = Math.abs($(window).scrollTop() - $('.work-card:visible').first().offset().top);
+    $('.work-card:visible').each(function (num, el) {
       var offset = Math.abs($(window).scrollTop() - $(el).offset().top);
       sections[offset] = $(el);
       if (offset < min) {
@@ -96,4 +96,8 @@ window.worksList = (function () {
       }
     });
   });
+
+  return {
+    findActiveSection: findActiveSection
+  };
 })();

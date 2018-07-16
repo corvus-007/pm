@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 
+  &--filtered {
+    animation: show-work-card $duration * 2;
+  }
+
   @include mq-min(1024px) {
     flex-direction: row;
 
@@ -199,5 +203,16 @@
   @include mq-min(1024px) {
     width: vh(22);
     height: vh(22);
+  }
+}
+
+@keyframes show-work-card {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
