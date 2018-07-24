@@ -4,6 +4,7 @@ table {
   font-size: rem(12);
   font-family: $primary-font;
   text-transform: uppercase;
+  text-align: center;
   border-collapse: separate;
   border-spacing: 5px;
 }
@@ -12,21 +13,26 @@ caption {
   margin-bottom: 0.5rem;
   font-weight: 600;
   font-size: rem($font-size);
-  text-align: left;
+}
+
+th {
+  font-weight: normal;
 }
 
 th,
 td {
-  padding: rem(8);
-  text-align: left;
+  padding: 8px 10px;
   transition: $duration;
+
+  @include mq-min(1024px) {
+    padding: vh(10) vh(12);
+  }
 }
 
 thead {
   th,
   td {
     background-color: $gray-239;
-    text-align: left;
   }
 }
 
@@ -37,13 +43,6 @@ tbody {
     th,
     td {
       border: 1px solid $gray-194;
-    }
-
-    &:hover {
-      th,
-      td {
-        background-color: $gray-245;
-      }
     }
   }
 }

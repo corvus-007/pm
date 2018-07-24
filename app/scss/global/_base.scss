@@ -4,17 +4,17 @@ html {
 
 body {
   margin: 0;
-  font-family: $primary-font;
   font-weight: 500;
-  line-height: 1.45;
   font-size: 100%;
+  line-height: 1.45;
+  font-family: $primary-font;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: $base-color;
   background-color: #ffffff;
-  cursor: $cursor-pointer;
   overflow-x: hidden;
+  cursor: $cursor-pointer;
 
   @include mq-min(1024px) {
     &::before {
@@ -22,7 +22,7 @@ body {
       position: fixed;
       top: 0;
       left: 0;
-      right: $site-offset-x;
+      right: vh(75);
       bottom: 0;
       z-index: 9;
       background-color: #ffffff;
@@ -32,7 +32,6 @@ body {
     }
 
     &.is-nav-hovered::before {
-
         opacity: 1;
         visibility: visible;
     }

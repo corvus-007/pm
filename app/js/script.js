@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var $ = window.jQuery;
+
   svg4everybody();
 
   if (window.matchMedia("(max-width: 1023px)").matches && document.body.classList.contains('homepage')) {

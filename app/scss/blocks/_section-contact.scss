@@ -47,8 +47,8 @@
 
 @include mq-min(1024px) {
   .section-contact:not(.active) .section-contact__text {
+    margin-bottom: vh(2);
     line-height: 1;
-    margin-bottom: vh(20);
   }
 }
 

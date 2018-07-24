@@ -3,10 +3,8 @@ window.worksFilter = (function () {
 
   var $ = window.jQuery;
   var $filter = $('.filter');
-  // var $filterSelect = $('.filter__select');
 
   function getHashFilter() {
-    // get filter=filterName
     var matches = location.hash.match(/filter=([^&]+)/i);
     var hashFilter = matches && matches[1];
     return hashFilter && decodeURIComponent(hashFilter);
@@ -51,8 +49,6 @@ window.worksFilter = (function () {
     });
 
     $grid.on('arrangeComplete', function (event, filteredItems) {
-      console.log(filteredItems);
-
       $('.work-card').removeClass('work-card--filtered');
       $(filteredItems).each(function () {
         $(this.element).addClass('work-card--filtered');
@@ -62,6 +58,7 @@ window.worksFilter = (function () {
     $grid.on('layoutComplete', function (event, laidOutItems) {
       window.worksList.findActiveSection();
     });
+
     // set selected class on button
     if (hashFilter) {
       $filters.find('.current').removeClass('current');

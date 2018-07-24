@@ -117,6 +117,10 @@
   @include mq-max(567px) {
     height: 35vw;
   }
+
+  @include mq-min(1024px) {
+    margin-bottom: -1px;
+  }
 }
 
 @include mq-min(1024px) {
