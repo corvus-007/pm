@@ -1,16 +1,17 @@
 .clients {
   position: relative;
+  width: 100%;
   height: 100%;
   min-width: 1px;
 }
 
 .clients__lists-wrapper {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
   height: 100%;
   box-sizing: border-box;
-  overflow: hidden;
 
   @include mq-max(1023px) {
     flex-wrap: wrap;
@@ -19,12 +20,31 @@
   }
 }
 
+.clients__list-wrapper {
+  display: flex;
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.clients__line {
+  position: relative;
+  width: auto;
+  min-width: 100%;
+  height: 11%;
+
+  &:not(:last-child) {
+    margin-bottom: 5.7vw;
+  }
+}
+
 .clients__list {
   @include clear-list();
 
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5vh;
+  flex-grow: 2;
+  height: 100%;
 
   &:last-child {
     margin-bottom: 0;
@@ -39,8 +59,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  flex-grow: 1;
   width: 30%;
+  margin-bottom: 10px;
+  text-align: center;
 
   @include mq-range(410px, 666px) {
     width: 30%;
@@ -57,26 +79,24 @@
   }
 
   @include mq-min(1024px) {
-    flex-shrink: 0;
-    min-width: 10vw;
-    margin-right: 5vw;
-    text-align: center;
-    transition: $duration * 3 $duration * 1.5 cubic-bezier(0.6, 0, 0.4, 1);
-
-    &:last-child {
-      margin-right: 0;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-width: 33%;
+    margin-bottom: 0;
   }
 }
 
 @include mq-min(1024px) {
   .section-clients:not(.active) .clients__item {
-    margin-bottom: vh(50);
+    margin-bottom: vh(2);
   }
 }
 
 .clients__picture {
-  filter: grayscale(100%);
+  max-width: 12 vw;
+  // filter: grayscale(100%);
 }
 
 .clients__title {
@@ -125,18 +145,18 @@
   @include mq-min(1024px) {
     display: block;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: -30px;
+    bottom: -30px;
     width: 20%;
 
     &--left {
       left: 0;
-      background: linear-gradient(to right, rgba(#ffffff, 1) 10%, rgba(#000000, 0));
+      background: linear-gradient(to right, rgba(#ffffff, 1) 10%, rgba(#ffffff, 0));
     }
 
     &--right {
       right: 0;
-      background: linear-gradient(to left, rgba(#ffffff, 1) 10%, rgba(#000000, 0));
+      background: linear-gradient(to left, rgba(#ffffff, 1) 10%, rgba(#ffffff, 0));
     }
   }
 }
