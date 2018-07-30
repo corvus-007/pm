@@ -15,14 +15,10 @@ caption {
   font-size: rem($font-size);
 }
 
-th {
-  font-weight: normal;
-}
-
 th,
 td {
   padding: 8px 10px;
-  transition: $duration;
+  font-weight: 500;
 
   @include mq-min(1024px) {
     padding: vh(10) vh(12);

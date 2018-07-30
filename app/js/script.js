@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   svg4everybody();
 
+  $('input[type="tel"]').inputmask({
+    "mask": "+7 (999) 999-99-99"
+  });
+
   if (window.matchMedia("(max-width: 1023px)").matches && document.body.classList.contains('homepage')) {
     window.addEventListener('scroll', function () {
       var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -32,7 +36,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
+
+    // Фиксит нажатие таба на элементах формы
+    $('.section-contact-form').on('keydown', 'input, textarea, button', function (event) {
+      if (event.keyCode === 9) {
+        event.stopPropagation();
+      }
+    });
   }
+
+  $('.homepage').on('click', '.main-header__to-order, .section-intro__to-order', function (event) {
+    event.preventDefault();
+
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      $.fn.fullpage.moveTo(3);
+    } else {
+      $('.section-contact')[0].scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+
 
   $('.section-intro').on("mousemove", function (e) {
     if (window.matchMedia("(min-width: 1024px)").matches) {
@@ -54,5 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
     $('body').addClass('is-nav-hovered');
   }, function (e) {
     $('body').removeClass('is-nav-hovered');
+  });
+
+  $('.service-detail__to-back, .work-detail__to-back').on('click', function (event) {
+    event.preventDefault();
+    window.history.back();
   });
 });

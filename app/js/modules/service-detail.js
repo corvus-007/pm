@@ -12,8 +12,9 @@ window.serviceDetail = (function () {
       accumulator += currentVal.charAt(0).toUpperCase();
       return accumulator;
     }, '');
-    $('<span>', { class: 'service-detail__abbr',  text: abbr}).appendTo($picture);
-
-    console.log(abbr);
+    $('<span>', {
+      class: 'service-detail__abbr',
+      text: abbr.substr(0, 2)
+    }).appendTo($picture);
   }
 })();

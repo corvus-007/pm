@@ -6,6 +6,8 @@
   }
 
   @include mq-min(1024px) {
+    display: flex !important;
+    flex-direction: column;
     opacity: 0;
     overflow: hidden;
     transition: opacity $duration * 2 cubic-bezier(0.3, 0.1, 1, 1) $duration / -5;

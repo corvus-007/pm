@@ -54,6 +54,6 @@
 
 .section-contact__form {
   @include mq-min(1024px) {
-    width: 50%;
+    flex-grow: 1;
   }
 }

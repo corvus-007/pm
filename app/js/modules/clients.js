@@ -3,79 +3,80 @@ window.clients = (function () {
 
   var $ = window.jQuery;
 
-  var $clients = $('.clients');
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    $('.clients').imagesLoaded(function () {
+      $(".clients__line").each(function (index, clientsLine) {
+        var clientsListWrapper = clientsLine.querySelector(".clients__list-wrapper");
+        var clinetsList = clientsLine.querySelector(".clients__list");
+        var clinetsListCloneLeft = clinetsList.cloneNode(true);
+        var clinetsListCloneRight = clinetsList.cloneNode(true);
 
-  var timeStamps = [];
-  var positions = [];
+        clinetsListCloneLeft.classList.add(
+          "clients__list--clone",
+          "clients__list--left"
+        );
+        clinetsListCloneRight.classList.add(
+          "clients__list--clone",
+          "clients__list--right"
+        );
+        clientsListWrapper.insertBefore(clinetsListCloneLeft, clinetsList);
+        clientsListWrapper.insertBefore(clinetsListCloneRight, null);
 
+        var avgWidth = clientsLine.scrollWidth - clientsLine.clientWidth;
+        clientsLine.addEventListener("scroll", function (event) {
+          if (clientsLine.scrollLeft >= avgWidth) {
+            clientsLine.scrollLeft =
+              clientsLine.scrollWidth / 3 +
+              (clinetsList.scrollWidth - clientsLine.clientWidth);
+          }
+          if (clientsLine.scrollLeft <= 0) {
+            clientsLine.scrollLeft = clientsLine.scrollWidth / 3;
+          }
+        });
 
-
-  function scrollLeft() {
-    $clientsLists.each(function (index) {
-      var interval = 10 + index;
-      var $list = $clientsLists.eq(index);
-      var position = positions[index] || 0;
-
-      timeStamps[index] = setInterval(function () {
-
-        position -= 2;
-
-        if (position <= 0) {
-          position = 0;
+        function getCenterScrollPosition() {
+          // return clientsLine.scrollWidth / 2 - clientsLine.clientWidth / 2;
+          return clientsLine.scrollWidth / 3;
         }
-        positions[index] = position;
 
-        $list.css('transform', 'translateX(-' + position + 'px)');
-      }, interval);
-    });
-  }
+        clientsLine.scrollLeft = getCenterScrollPosition();
 
-  function scrollRight() {
-    $clientsLists.each(function (index) {
-      var interval = 10 + index;
-      var $list = $clientsLists.eq(index);
-      var maxPosition = this.scrollWidth - this.clientWidth;
-      var position = positions[index] || 0;
+        var requestId;
+        var request20;
+        var requestArr = [];
 
-      timeStamps[index] = setInterval(function () {
+        $(".js-client-scroll-left").on("mouseover", function () {
+          requestId = requestAnimationFrame(function animate() {
+            clientsLine.scrollLeft += 2 + index;
+            request20 = requestAnimationFrame(animate);
+            requestArr.push(request20);
+          });
+        });
 
-        position += 2;
+        $(".js-client-scroll-left").on("mouseout", function () {
+          for (var req of requestArr) {
+            cancelAnimationFrame(req);
+          }
+          cancelAnimationFrame(requestId);
+          requestArr.length = 0;
+        });
 
-        if (position >= maxPosition) {
-          position = maxPosition;
-        }
-        positions[index] = position;
+        $(".js-client-scroll-right").on("mouseover", function () {
+          requestId = requestAnimationFrame(function animate() {
+            clientsLine.scrollLeft -= 2 + index;
+            request20 = requestAnimationFrame(animate);
+            requestArr.push(request20);
+          });
+        });
 
-        $list.css('transform', 'translateX(-' + position + 'px)');
-      }, interval);
-    });
-  }
-
-  function clearTime() {
-    for (var i = 0; i < timeStamps.length; i++) {
-      clearInterval(timeStamps[i]);
-    }
-  }
-
-  if ($clients.length) {
-    var $clientsHoverLeft = $('.js-client-scroll-left');
-    var $clientsHoverRight = $('.js-client-scroll-right');
-    var $clientsLists = $('.clients__list');
-
-    $clientsHoverLeft.on('mouseover', function () {
-      scrollLeft();
-    });
-
-    $clientsHoverRight.on('mouseover', function () {
-      scrollRight();
-    });
-
-    $clientsHoverLeft.on('mouseout', function () {
-      clearTime();
-    });
-
-    $clientsHoverRight.on('mouseout', function () {
-      clearTime();
+        $(".js-client-scroll-right").on("mouseout", function () {
+          for (var req of requestArr) {
+            cancelAnimationFrame(req);
+          }
+          cancelAnimationFrame(requestId);
+          requestArr.length = 0;
+        });
+      });
     });
   }
 })();

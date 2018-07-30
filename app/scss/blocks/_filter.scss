@@ -11,6 +11,17 @@
   display: flex;
   flex-wrap: wrap;
 
+  @include mq-min(1024px) {
+    a {
+      font-size: vh(12);
+
+      &:hover,
+      &:focus {
+        color: $base-color;
+      }
+    }
+  }
+
   li {
     margin-right: 35px;
 
@@ -20,28 +31,36 @@
   }
 
   a {
+    font-size: rem(12);
+    font-weight: 600;
+    position: relative;
     display: block;
     padding: 10px;
-    font-weight: 600;
-    font-size: rem(12);
+    transition: $duration * 2;
     text-decoration: none;
     color: $gray-194;
-    transition: $duration * 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      z-index: -1;
+      width: 0;
+      height: 8px;
+      transform: rotate(-1deg);
+      transform-origin: 0 100%;
+      transition: width $duration * 2;
+      background-color: $warning-color;
+    }
   }
 
   .current a {
     color: $base-color;
     pointer-events: none;
-  }
 
-  @include mq-min(1024px) {
-    a {
-      font-size: vh(12);
-
-      &:hover,
-      &:focus {
-        color: $base-color;
-      }
+    &::before {
+      width: 100%;
     }
   }
 }

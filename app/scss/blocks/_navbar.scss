@@ -23,6 +23,7 @@
   @include mq-min(1024px) {
     left: auto;
     z-index: 10;
+    width: vh(75);
     max-height: 100%;
     border-left: 1px solid $gray-194;
     transition: $duration * 2;

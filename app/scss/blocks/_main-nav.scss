@@ -1,6 +1,3 @@
-.main-nav {
-}
-
 .main-nav__list {
   @include clear-list();
 
@@ -9,11 +6,8 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    z-index: 1;
   }
-}
-
-.main-nav__item {
-
 }
 
 .main-nav__link {
@@ -27,6 +21,7 @@
   text-align: center;
   text-decoration: none;
   color: $gray-194;
+  z-index: 1;
 
   &:hover,
   &:focus {
@@ -71,14 +66,14 @@
 .main-nav__text {
   @include mq-min(1024px) {
     display: inline-block;
-    transform: rotate(180deg);
-    writing-mode: vertical-rl;
+    transform: rotate(-90deg) translate3d(0, 0, 0);
+    // writing-mode: vertical-lr;
     transition: $duration * 2 $duration;
 
     .main-nav__item:hover &,
     .main-nav__link:hover &,
     .main-nav__link:focus & {
-      transform: rotate(180deg) translate3d(-120%, 0, 0);
+      transform: rotate(-90deg) translateY(120%);
       opacity: 0;
       transition-delay: 0s;
     }
@@ -164,14 +159,17 @@
     top: 0;
     right: 50%;
     bottom: 0;
+    z-index: 1;
     opacity: 0;
     visibility: hidden;
-    transition: $duration $duration;
+    // transition: $duration $duration;
+    pointer-events: none;
 
     .main-nav__item:hover & {
       transform: translateX(0);
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
     }
   }
 }

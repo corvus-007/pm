@@ -23,8 +23,9 @@
 @import "blocks/input";
 @import "blocks/field";
 @import "blocks/table";
+@import "blocks/wp-caption";
 @import "blocks/textual";
-@import "blocks/page";
+@import "blocks/page-article";
 @import "blocks/popup";
 @import "blocks/filter";
 @import "blocks/cta-form";
@@ -54,6 +55,7 @@
 @import "blocks/works";
 
 @import "blocks/work-detail-participate";
+@import "blocks/work-detail-social-share";
 @import "blocks/work-detail";
 
 @import "blocks/service-detail-form";

@@ -18,22 +18,24 @@ window.worksList = (function () {
     }
 
     var sections = {};
-    var min = Math.abs($(window).scrollTop() - $('.work-card:visible').first().offset().top);
-    $('.work-card:visible').each(function (num, el) {
-      var offset = Math.abs($(window).scrollTop() - $(el).offset().top);
-      sections[offset] = $(el);
-      if (offset < min) {
-        min = offset;
+    if ($('.work-card:visible').length) {
+      var min = Math.abs($(window).scrollTop() - $('.work-card:visible').first().offset().top);
+      $('.work-card:visible').each(function (num, el) {
+        var offset = Math.abs($(window).scrollTop() - $(el).offset().top);
+        sections[offset] = $(el);
+        if (offset < min) {
+          min = offset;
+        }
+        var bottomOffset = Math.abs($(window).scrollTop() + $(window).outerHeight() - ($(el).offset().top + $(el).outerHeight()));
+        sections[bottomOffset] = $(el);
+        if (bottomOffset < min) {
+          min = bottomOffset;
+        }
+      });
+      if (!sections[min].hasClass('work-card--current')) {
+        $('.work-card').removeClass('work-card--current');
+        sections[min].addClass('work-card--current');
       }
-      var bottomOffset = Math.abs($(window).scrollTop() + $(window).outerHeight() - ($(el).offset().top + $(el).outerHeight()));
-      sections[bottomOffset] = $(el);
-      if (bottomOffset < min) {
-        min = bottomOffset;
-      }
-    });
-    if (!sections[min].hasClass('work-card--current')) {
-      $('.work-card').removeClass('work-card--current');
-      sections[min].addClass('work-card--current');
     }
   };
 

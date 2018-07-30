@@ -10,6 +10,26 @@
   }
 }
 
+.wpcf7-list-item-label {
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: none;
+}
+
+
+.wpcf7-acceptance {
+  display: block;
+  margin-top: -15px;
+}
+
+span.wpcf7-list-item {
+  margin-left: 0;
+
+  label {
+    display: flex;
+  }
+}
+
 .wpcf7-form {
   p:empty,
   br {
@@ -22,14 +42,14 @@ span.wpcf7-not-valid-tip {
   left: 0;
   right: 0;
   top: 100%;
-  display: inline-block;
+  display: none;
   padding: 5px 10px;
   font-size: rem(11);
   color: #fff;
   background-color: $danger-color;
 }
 
-.form-control {
+.input {
   &.wpcf7-not-valid {
     border-color: $danger-color;
   }
@@ -39,13 +59,14 @@ span.wpcf7-not-valid-tip {
   display: block;
 }
 
-.wpcf7-response-output {
+div.wpcf7-response-output {
   margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
   padding: 0.5em 0.7em;
-  font-size: rem(14);
+  font-size: 12px;
   text-shadow: none;
+  text-transform: none;
   border: 2px solid;
 
   &.wpcf7-validation-errors {

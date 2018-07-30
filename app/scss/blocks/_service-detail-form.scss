@@ -9,6 +9,10 @@
     padding-right: $site-offset-x;
     box-sizing: border-box;
     border: 1px solid;
+
+    div.wpcf7-response-output {
+      margin-top: vh(25);
+    }
   }
 }
 
@@ -17,6 +21,7 @@
   margin-bottom: vh(35);
   text-align: center;
   font-size: rem(18);
+  font-weight: 500;
 
   @include mq-min(1024px) {
     font-size: vh(18);
@@ -29,8 +34,8 @@
 }
 
 .service-detail-form__actions {
-  margin-top: vh(35);
   align-self: center;
+  margin-top: vh(5);
 
   @include mq-min(1024px) {
     margin-bottom: vh(-13.8 - 6); // половина высоты кнопки и паддинг

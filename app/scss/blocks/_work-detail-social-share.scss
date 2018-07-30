@@ -1,0 +1,21 @@
+.work-detail-social-share {
+  .heateor_sss_sharing_ul {
+    margin: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex-grow: 1;
+    }
+
+    .heateorSssSharing {
+      width: 100% !important;
+      margin: 0;
+    }
+  }
+
+  .heateorSssSharing,
+  .heateorSssSharingButton {
+    cursor: $cursor-pointer-active;
+  }
+}

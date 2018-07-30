@@ -22,7 +22,7 @@
   margin: 0;
   margin-bottom: 15px;
   font-weight: 600;
-  font-size: rem(36);
+  font-size: rem(32);
   line-height: 1.15;
 
   span {
@@ -45,6 +45,10 @@
       transform-origin: 0 100%;
       background-color: $warning-color;
     }
+  }
+
+  @include mq-min(568px) {
+    font-size: rem(36);
   }
 
   @include mq-min(1024px) {
