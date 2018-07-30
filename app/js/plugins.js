@@ -3,3 +3,4 @@
 //=require ../../node_modules/fullpage.js/dist/fullpage.min.js
 //=require ../../node_modules/isotope-layout/dist/isotope.pkgd.min.js
 //=require ../../node_modules/imagesloaded/imagesloaded.pkgd.min.js
+//=require ../../node_modules/inputmask/dist/jquery.inputmask.bundle.js
