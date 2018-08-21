@@ -16,7 +16,6 @@ window.worksFilter = (function () {
     var isIsotopeInit = false;
 
     $grid.imagesLoaded(function () {
-      $('.work-card').addClass('work-card--filtered');
       $filters = $filter.on('click', 'a', function (event) {
         event.preventDefault();
         var filterAttr = $(this).data('filter');
