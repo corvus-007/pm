@@ -30,7 +30,6 @@
 
 .service-detail__edging {
   position: relative;
-  margin-bottom: 20px;
 
   @include mq-min(1024px) {
     margin-bottom: vh(45);

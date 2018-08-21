@@ -1,0 +1,57 @@
+.tariff-plan {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: top;
+
+  // &--selected {
+  //   border-color: $warning-color;
+  //   box-shadow: inset 0 0 0 2px $warning-color;
+  // }
+
+  @include mq-max(1023px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: 15px;
+    border: 1px solid $gray-239;
+  }
+}
+
+.tariff-plan__icon {
+  width: 72px;
+  height: 72px;
+}
+
+.tariff-plan__title {
+  font-size: 14px;
+  font-weight: 600;
+
+  @include mq-max(1023px) {
+    font-size: 19px;
+  }
+}
+
+.tariff-plan__price {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 17px;
+  line-height: 1.2;
+
+  b {
+    font-weight: 600;
+  }
+
+  @include mq-min(1024px) {
+    b {
+      display: block;
+      font-size: 24px;
+    }
+  }
+}
+
+.tariff-plan__price-note {
+  color: $muted-color;
+  font-size: 0.8em;
+}

@@ -1,0 +1,21 @@
+.tariffs-plans {
+  @include mq-max(1023px) {
+    display: block;
+
+    th:empty {
+      display: none;
+    }
+  }
+}
+
+.tariffs-plans__row {
+  @include mq-max(1023px) {
+    display: block;
+  }
+}
+
+.tariffs-plans__item {
+  @include mq-max(1023px) {
+    display: flex;
+  }
+}

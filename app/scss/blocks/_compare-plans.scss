@@ -1,0 +1,14 @@
+.compare-plans {
+  table-layout: fixed;
+  text-transform: none;
+
+  @include mq-max(1023px) {
+    display: block;
+  }
+}
+
+.compare-plans__tariffs-options {
+  @include mq-max(1023px) {
+    display: none;
+  }
+}

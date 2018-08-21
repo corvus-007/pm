@@ -28,12 +28,6 @@
   }
 }
 
-.clients__picture {
-  // margin: auto;
-  // max-width: 12vw;
-  // filter: grayscale(100%);
-}
-
 .clients__line {
   width: 100%;
 
@@ -71,10 +65,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  flex-basis: 100px;
+  flex-basis: 140px;
   margin: 8px;
-  // margin-bottom: 3vmax;
+  text-align: center;
   box-sizing: border-box;
 
   @include mq-max(1023px) {
@@ -133,10 +126,10 @@
   display: none;
 
   @include mq-min(1024px) {
-    display: block;
     position: absolute;
     top: -30px;
     bottom: -30px;
+    display: block;
     width: 20%;
 
     &--left {

@@ -1,44 +1,20 @@
 table {
   max-width: 100%;
   width: 100%;
-  font-size: rem(12);
+  font-size: 12px;
   font-family: $primary-font;
   text-transform: uppercase;
   text-align: center;
-  border-collapse: separate;
-  border-spacing: 5px;
-}
-
-caption {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  font-size: rem($font-size);
+  border-collapse: collapse;
 }
 
 th,
 td {
-  padding: 8px 10px;
+  padding: 5px;
   font-weight: 500;
+  border: 1px solid $gray-194;
 
   @include mq-min(1024px) {
     padding: vh(10) vh(12);
-  }
-}
-
-thead {
-  th,
-  td {
-    background-color: $gray-239;
-  }
-}
-
-tbody {
-  vertical-align: top;
-
-  tr {
-    th,
-    td {
-      border: 1px solid $gray-194;
-    }
   }
 }
